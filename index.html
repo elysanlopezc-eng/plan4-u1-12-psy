@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Antecedents & Scientific Psychology - Daily Lesson Plan 4</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        montanoBlue: '#1269A8',
+                        montanoYellow: '#F7D615',
+                        montanoGreen: '#54887D',
+                        montanoLightBlue: '#88B5C7',
+                        montanoOlive: '#A6B046',
+                        montanoBg: '#F2F5E9'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F2F5E9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .tab-btn.active {
+            background-color: #1269A8;
+            color: #ffffff;
+            border-bottom: 4px solid #F7D615;
+            transform: translateY(-2px);
+        }
+        .board-card {
+            background: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 2px solid #88B5C7;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 flex flex-col justify-between p-2 md:p-6">
+
+    <!-- TOP HEADER / BANNER -->
+    <header class="board-card rounded-2xl p-4 md:p-6 mb-6 relative overflow-hidden bg-white">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b-2 border-gray-100 pb-4">
+            <!-- Colegio Montano Branding -->
+            <div class="flex items-center gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" 
+                     alt="Colegio Montano Logo" 
+                     class="h-16 w-auto object-contain rounded-lg shadow-sm"
+                     onerror="this.src='https://placehold.co/120x60/1269A8/ffffff?text=Montano'">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-montanoBlue tracking-tight">COLEGIO MONTANO</h1>
+                    <p class="text-xs md:text-sm font-semibold text-montanoGreen tracking-wide uppercase">Interactive Digital Classroom Board</p>
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleFullScreen()" class="flex items-center gap-2 bg-montanoBlue hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200 text-sm">
+                    <i class="fa-solid fa-expand"></i>
+                    <span>Fullscreen</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Class Plan Metadata -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mt-4 text-xs md:text-sm">
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Course</span>
+                <span class="font-semibold text-gray-700">Psychology</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Grade</span>
+                <span class="font-semibold text-gray-700">5to Mercadotecnia</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Unit / Plan</span>
+                <span class="font-semibold text-gray-700">Unit 1 - Plan #4</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Date</span>
+                <span class="font-semibold text-gray-700">Feb 8 - 12</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100 col-span-2 md:col-span-1">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Teacher</span>
+                <span class="font-semibold text-gray-700">Elysa López</span>
+            </div>
+            <div class="bg-yellow-50 p-2.5 rounded-lg border border-yellow-200 col-span-2 md:col-span-2">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Topic</span>
+                <span class="font-bold text-montanoBlue">Historical Antecedents & Scientific Psychology</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PEDAGOGICAL ALIGNMENT COLLAPSIBLE SUMMARY -->
+    <section class="mb-6">
+        <details class="board-card rounded-2xl bg-white overflow-hidden group">
+            <summary class="p-4 font-bold text-montanoBlue cursor-pointer flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-montanoOlive"></i>
+                    Pedagogical Framework & Institution Alignment (CNB Guatemala & Montano Habits)
+                </span>
+                <i class="fa-solid fa-chevron-down text-montanoBlue group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-100 text-xs md:text-sm">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-bullseye"></i> CNB Competence & Achievement
+                    </h4>
+                    <p class="text-gray-600"><strong>Competence:</strong> Traces the historical and scientific evolution of psychology to evaluate modern empirical methods in marketing.</p>
+                    <p class="text-gray-600"><strong>Learning Outcome:</strong> Contrasts philosophical roots (Rationalism vs. Empiricism) with Wundt's experimental laboratory (1879) and articulates their relevance to understanding consumer behavior.</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-brain"></i> Key Competencies & Montano Habits
+                    </h4>
+                    <p class="text-gray-600"><strong>Skills:</strong> Historical Analysis, Critical Thinking, Timeline Synthesis, Methodological Evaluation.</p>
+                    <p class="text-gray-600"><strong>Montano Habits:</strong> <em>Sharpen the Saw</em> (deepening foundational knowledge) & <em>Synergize</em> (building a collaborative timeline in teams).</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-open"></i> Resources & Assessment
+                    </h4>
+                    <p class="text-gray-600"><strong>Resources:</strong> Interactive Timeline Cards, Philosopher Comparison Matrix, Digital Board, Assessment Rubric.</p>
+                    <p class="text-gray-600"><strong>3 Assessment Moments:</strong> Diagnostic Guiding Question (Initial), Timeline Matrix (Formative), Plenary Presentation & Exit Ticket (Summative).</p>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- MAIN PEDAGOGICAL SEQUENCE (TABS) -->
+    <main class="board-card rounded-2xl p-4 md:p-6 mb-6 bg-white flex-grow">
+        <!-- TAB NAVIGATION -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6 border-b border-gray-200 pb-4">
+            <button onclick="switchTab(1)" id="tab-btn-1" class="tab-btn active p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage I (~5 min)</span>
+                <span><i class="fa-solid fa-hourglass-start mr-1"></i> Pre-Science Inquiry</span>
+            </button>
+            <button onclick="switchTab(2)" id="tab-btn-2" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage II (30 min)</span>
+                <span><i class="fa-solid fa-scroll mr-1"></i> Philosophy to Wundt</span>
+            </button>
+            <button onclick="switchTab(3)" id="tab-btn-3" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage III (15 min)</span>
+                <span><i class="fa-solid fa-timeline mr-1"></i> Collaborative Timeline</span>
+            </button>
+            <button onclick="switchTab(4)" id="tab-btn-4" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage IV (10 min)</span>
+                <span><i class="fa-solid fa-chart-line mr-1"></i> Market Relevance & Exit</span>
+            </button>
+        </div>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <div id="tab-contents">
+            <!-- STAGE I: PRE-SCIENCE INQUIRY -->
+            <div id="tab-1" class="tab-content space-y-6">
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-montanoBlue p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-question-circle text-montanoYellow"></i> Stage I: Guiding Question (~5 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        <strong>Central Inquiry Question:</strong> <em>"Before psychology became an official science in 1879, how did humans explain emotions, thoughts, and choices?"</em>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Class Discussion Points -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-montanoGreen mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-comments"></i> Exploratory Class Discussion
+                        </h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-3">
+                            <li><strong>Myths & Religion:</strong> Ancient civilizations often attributed mental states to spirits or divine forces.</li>
+                            <li><strong>Pure Philosophy:</strong> Thinkers relied on logic and internal reflection rather than controlled experiments.</li>
+                            <li><strong>Why the Shift?</strong> Why was pure reflection insufficient for understanding how humans actually behave?</li>
+                        </ul>
+                    </div>
+
+                    <!-- Revealable Insight Box -->
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-montanoBlue mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-lightbulb"></i> Historical Turning Point
+                            </h4>
+                            <p class="text-xs text-gray-500 mb-3">Click below to see the critical shift that birthed modern psychological science:</p>
+                        </div>
+                        <button onclick="toggleAnswer('hist-hook')" class="w-full bg-montanoOlive text-white font-semibold py-2 rounded-lg hover:bg-opacity-90 transition text-sm">
+                            Show Core Historical Shift
+                        </button>
+                        <div id="hist-hook" class="hidden mt-3 p-3 bg-white border border-montanoOlive rounded-lg text-xs text-gray-700">
+                            <strong>Key Shift:</strong> Moving from <em>"Armchair Philosophy"</em> (speculating about the mind) to <em>"Empirical Science"</em> (measuring reaction times, sensation, and perception in a laboratory setting).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE II: PHILOSOPHY TO WUNDT -->
+            <div id="tab-2" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-montanoGreen p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoGreen mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-flask-vial"></i> Stage II: Philosophical Antecedents & Wundt's Lab (~30 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">15 min Philosophical Thinkers (Descartes vs. Locke) | 15 min Wundt & Leipzig Lab (1879)</p>
+                </div>
+
+                <!-- Philosophical Thinkers Comparison -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- René Descartes -->
+                    <div class="p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-montanoBlue uppercase tracking-wide">Rationalism</span>
+                            <span class="bg-blue-100 text-montanoBlue text-xs font-bold px-2 py-0.5 rounded">1596 - 1650</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-lg">René Descartes: Dualism & Reason</h4>
+                        <ul class="text-xs text-gray-600 mt-3 space-y-2">
+                            <li><strong>Core Concept:</strong> Interactive Dualism (Mind and body are separate entities that interact via the pineal gland).</li>
+                            <li><strong>Rationalism:</strong> Knowledge is gained through reason and innate ideas rather than sensory experience alone.</li>
+                            <li><strong>Famous Quote:</strong> <em>"Cogito, ergo sum"</em> (I think, therefore I am).</li>
+                        </ul>
+                    </div>
+
+                    <!-- John Locke -->
+                    <div class="p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-montanoGreen uppercase tracking-wide">Empiricism</span>
+                            <span class="bg-green-100 text-montanoGreen text-xs font-bold px-2 py-0.5 rounded">1632 - 1704</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-lg">John Locke: The Blank Slate</h4>
+                        <ul class="text-xs text-gray-600 mt-3 space-y-2">
+                            <li><strong>Core Concept:</strong> <em>Tabula Rasa</em> (The mind at birth is a blank slate).</li>
+                            <li><strong>Empiricism:</strong> All knowledge originates from sensory experience and observation of the environment.</li>
+                            <li><strong>Marketing Link:</strong> Consumer habits and brand preferences are learned through environmental exposure.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Wilhelm Wundt & 1879 Laboratory -->
+                <div class="bg-yellow-50 p-5 rounded-xl border border-yellow-200">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-3">
+                        <div>
+                            <span class="bg-montanoYellow text-montanoBlue font-black text-xs px-2.5 py-1 rounded uppercase tracking-wide">Birth of Psychology as a Science</span>
+                            <h4 class="text-lg font-bold text-montanoBlue mt-1">Wilhelm Wundt & The Leipzig Laboratory (1879)</h4>
+                        </div>
+                        <span class="text-sm font-bold text-montanoGreen bg-white px-3 py-1 rounded-lg border border-gray-200">Leipzig, Germany</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-700 mt-4">
+                        <div class="bg-white p-3 rounded-lg border border-yellow-100">
+                            <strong>1. First Experimental Lab:</strong> Established the very first psychology laboratory in 1879, separating psychology from philosophy and biology.
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-yellow-100">
+                            <strong>2. Experimental Introspection:</strong> Trained subjects to observe and record their conscious experiences under strictly controlled conditions.
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border border-yellow-100">
+                            <strong>3. Structuralism Focus:</strong> Aimed to break down mental processes into basic elements (sensations, feelings, perceptions).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guided Interactive Checking Questions -->
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <h5 class="font-bold text-montanoBlue text-sm mb-2">Check Your Understanding:</h5>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2 bg-white rounded border flex justify-between items-center">
+                            <span>Which philosopher claimed the mind is a "Tabula Rasa" (blank slate)?</span>
+                            <button onclick="toggleAnswer('chk-1')" class="bg-montanoLightBlue text-white px-2 py-1 rounded font-bold">Show Answer</button>
+                        </div>
+                        <div id="chk-1" class="hidden p-2 bg-blue-50 text-montanoBlue font-semibold rounded">John Locke (Empiricism)</div>
+
+                        <div class="p-2 bg-white rounded border flex justify-between items-center">
+                            <span>What significant event occurred in Leipzig, Germany in 1879?</span>
+                            <button onclick="toggleAnswer('chk-2')" class="bg-montanoLightBlue text-white px-2 py-1 rounded font-bold">Show Answer</button>
+                        </div>
+                        <div id="chk-2" class="hidden p-2 bg-blue-50 text-montanoBlue font-semibold rounded">Wilhelm Wundt founded the first official experimental psychology laboratory.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE III: COLLABORATIVE TIMELINE -->
+            <div id="tab-3" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-montanoYellow p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-users-viewfinder text-montanoBlue"></i> Stage III: Collaborative Timeline Matrix (~15 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">Teams of 4 build a chronological roadmap connecting philosophical antecedents to scientific psychology.</p>
+                </div>
+
+                <!-- Timeline Matrix Table -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-montanoBlue mb-3">Historical Progression Matrix</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs md:text-sm text-left border-collapse">
+                            <thead class="bg-montanoBlue text-white uppercase text-xs">
+                                <tr>
+                                    <th class="p-3 rounded-tl-lg">Era / Date</th>
+                                    <th class="p-3">Key Figure & Movement</th>
+                                    <th class="p-3">Methodology Used</th>
+                                    <th class="p-3 rounded-tr-lg">Contribution to Modern Science</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 text-gray-700">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-bold text-montanoBlue">Ancient Era</td>
+                                    <td class="p-3">Socrates & Plato (Rationalism)</td>
+                                    <td class="p-3">Dialectic introspection & logic</td>
+                                    <td class="p-3">Pioneered questioning innate human knowledge.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-bold text-montanoBlue">17th Century</td>
+                                    <td class="p-3">René Descartes (Dualism)</td>
+                                    <td class="p-3">Deductive reasoning</td>
+                                    <td class="p-3">Distinguished mental processes from physical body actions.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-bold text-montanoBlue">Late 17th Century</td>
+                                    <td class="p-3">John Locke (Empiricism)</td>
+                                    <td class="p-3">Sensory observation & experience</td>
+                                    <td class="p-3">Laid the foundation for empirical data collection.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-yellow-50/50">
+                                    <td class="p-3 font-bold text-montanoOlive">1879</td>
+                                    <td class="p-3 font-bold text-montanoBlue">Wilhelm Wundt (Scientific Psychology)</td>
+                                    <td class="p-3 font-semibold">Controlled laboratory experimentation & Introspection</td>
+                                    <td class="p-3 font-semibold">Established psychology as an independent, measurement-based science.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE IV: MARKET RELEVANCE & EXIT TICKET -->
+            <div id="tab-4" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-montanoOlive p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-montanoYellow"></i> Stage IV: Market Relevance & Synthesis (~10 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">5 min Connecting Research History to Consumer Understanding + 5 min Exit Ticket</p>
+                </div>
+
+                <!-- Marketing Connection Card -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-montanoBlue text-base mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-shop text-montanoGreen"></i> How History Shapes Modern Consumer Research
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-700 mb-4">Why does a marketer care about Wundt's 1879 laboratory?</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-100">
+                            <span class="font-bold text-montanoBlue block mb-1">Locke's Empiricism → Market Research</span>
+                            <p class="text-gray-600">Marketers don't guess what customers want; they collect empirical data through surveys, focus groups, and website analytics.</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded-lg border border-green-100">
+                            <span class="font-bold text-montanoGreen block mb-1">Wundt's Lab → Neuromarketing & AB Testing</span>
+                            <p class="text-gray-600">Controlled lab experiments led directly to tracking eye movements, measuring reaction times, and running controlled A/B ad tests.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exit Ticket -->
+                <div class="bg-blue-50 p-5 rounded-xl border border-montanoLightBlue">
+                    <h4 class="font-bold text-montanoBlue text-sm mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-ticket"></i> 5-Minute Exit Ticket Prompt (Individual Submission)
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-700">Write 1 sentence: <strong>"How did Wilhelm Wundt's work in 1879 transform human behavior from a subject of philosophical debate into something measurable for modern science and marketing?"</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- INTERACTIVE PLENARY EVALUATION RUBRIC -->
+    <section class="board-card rounded-2xl p-4 md:p-6 bg-white">
+        <h3 class="text-lg font-bold text-montanoBlue mb-4 flex items-center gap-2 border-b pb-2">
+            <i class="fa-solid fa-clipboard-check text-montanoGreen"></i> Plenary Evaluation Rubric (Interactive Scoring Tool for Teacher)
+        </h3>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-xs md:text-sm text-left border-collapse">
+                <thead class="bg-gray-100 text-montanoBlue uppercase font-bold text-xs">
+                    <tr>
+                        <th class="p-3 border">Criteria</th>
+                        <th class="p-3 border">Needs Improvement (1 pt)</th>
+                        <th class="p-3 border">Satisfactory (2 pts)</th>
+                        <th class="p-3 border">Exemplary (3 pts)</th>
+                        <th class="p-3 border text-center">Interactive Score</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y text-gray-700">
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">1. Historical Knowledge</td>
+                        <td class="p-3 border">Confuses philosophical roots with Wundt's scientific lab.</td>
+                        <td class="p-3 border">Identifies Descartes, Locke, and Wundt with minor errors.</td>
+                        <td class="p-3 border">Accurately details Rationalism, Empiricism, and 1879 Leipzig lab milestones.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">2. Synthesis & Connection</td>
+                        <td class="p-3 border">Fails to connect research history to modern marketing.</td>
+                        <td class="p-3 border">Makes basic links between empiricism and market data.</td>
+                        <td class="p-3 border">Clearly articulates how experimental history enables scientific consumer research.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">3. Team Collaboration</td>
+                        <td class="p-3 border">Unequal participation while assembling timeline.</td>
+                        <td class="p-3 border">Most team members contributed to timeline creation.</td>
+                        <td class="p-3 border">Demonstrated strong synergy and role execution (Habit: Synergize).</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">4. Plenary Communication</td>
+                        <td class="p-3 border">Unclear explanation during timeline defense.</td>
+                        <td class="p-3 border">Explains timeline clearly with basic historical vocabulary.</td>
+                        <td class="p-3 border">Delivers crisp, confident presentation with strong scientific vocabulary.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rubric Total Result -->
+        <div class="mt-4 flex justify-between items-center bg-montanoBg p-3 rounded-xl border border-montanoOlive">
+            <span class="font-bold text-montanoBlue text-sm">Total Team Assessment Score:</span>
+            <span id="rubric-total" class="text-lg font-black text-montanoBlue bg-white px-4 py-1 rounded-lg border border-gray-200">12 / 12 pts</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-6 text-center text-xs text-gray-500 py-2">
+        Colegio Montano &copy; 2026 | Pedagogical Digital Board System | Model CNB Guatemala
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Tab Navigation Switcher
+        function switchTab(tabIndex) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`tab-${tabIndex}`).classList.remove('hidden');
+            document.getElementById(`tab-btn-${tabIndex}`).classList.add('active');
+        }
+
+        // Toggle Hidden Solution / Content Accordion
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Fullscreen Toggle Functionality
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Rubric Calculation Logic
+        function calculateRubricScore() {
+            const selects = document.querySelectorAll('.rubric-score');
+            let total = 0;
+            selects.forEach(select => {
+                total += parseInt(select.value, 10);
+            });
+            document.getElementById('rubric-total').innerText = `${total} / 12 pts`;
+        }
+    </script>
+</body>
+</html>
